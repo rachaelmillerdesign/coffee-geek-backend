@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
-  before_filter :set_comment, only: [:show, :update, :destroy]
-  before_filter :set_article, only: [:index, :create]
+  before_action :set_comment, only: [:show, :update, :destroy]
+  before_action :set_article, only: [:index, :create]
 
   def index
   end
