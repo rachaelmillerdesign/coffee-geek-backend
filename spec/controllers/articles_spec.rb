@@ -49,8 +49,7 @@ RSpec.describe ArticlesController do
     end
 
     before(:each) do
-      patch :update, id: article.id,
-                     params: { article: article_diff }
+      patch :update, params: { id: article.id, article: article_diff }
     end
 
     skip 'is successful' do
