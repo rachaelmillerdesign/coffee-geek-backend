@@ -243,7 +243,7 @@ Then, following BDD, write tests for the route and controller.
 **User Story** As a user, I want to see the comments associated with an article.
 **User Story** As a user, I want comments to be deleted when an article is deleted.
 
-In [spec/models/articles_spec.rb](spec/models/articles_spec.rb), we will need
+In [spec/models/article_spec.rb](spec/models/article_spec.rb), we will need
 to write tests to check for the following:
 
 1.  Articles can have many comments.
