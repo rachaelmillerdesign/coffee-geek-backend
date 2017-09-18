@@ -16,8 +16,8 @@ do.
 
 ## Prerequisites
 
--   [ga-wdi-boston/rails-api](https://github.com/ga-wdi-boston/rails-api)
--   [ga-wdi-boston/rails-activerecord-crud](https://github.com/ga-wdi-boston/rails-activerecord-crud)
+-   [rails-api](https://git.generalassemb.ly/ga-wdi-boston/rails-api)
+-   [rails-activerecord-crud](https://git.generalassemb.ly/ga-wdi-boston/rails-activerecord-crud)
 
 ## Objectives
 
@@ -34,7 +34,7 @@ By the end of this lesson, students should be able to:
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
 1.  Install dependencies with `bundle install`.
 1.  Run `bundle exec rake db:create` and `bundle exec rake db:migrate`.
