@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe UsersController do
@@ -16,7 +17,7 @@ RSpec.describe UsersController do
 
   describe 'POST signup' do
     before(:each) do
-      post :signup, params: { credentials: user_params }
+      post :signup, params: { credentials: user_params }, format: :json
     end
 
     it 'is successful' do
@@ -31,8 +32,8 @@ RSpec.describe UsersController do
 
   describe 'POST signin' do
     before(:each) do
-      post :signup, params: { credentials: user_params }
-      post :signin, params: { credentials: user_params }
+      post :signup, params: { credentials: user_params }, format: :json
+      post :signin, params: { credentials: user_params }, format: :json
     end
 
     it 'is successful' do
@@ -47,8 +48,8 @@ RSpec.describe UsersController do
 
   context 'when authenticated' do
     before(:each) do
-      post :signup, params: { credentials: user_params }
-      post :signin, params: { credentials: user_params }
+      post :signup, params: { credentials: user_params }, format: :json
+      post :signin, params: { credentials: user_params }, format: :json
 
       @token = JSON.parse(response.body)['user']['token']
       request.env['HTTP_AUTHORIZATION'] = "Token token=#{@token}"
@@ -66,7 +67,8 @@ RSpec.describe UsersController do
 
       before(:each) do
         patch :changepw,
-              params: { id: @user_id, passwords: new_password_params }
+              params: { id: @user_id, passwords: new_password_params },
+              format: :json
       end
 
       it 'is successful' do
@@ -80,7 +82,7 @@ RSpec.describe UsersController do
 
     describe 'DELETE signout' do
       before(:each) do
-        delete :signout, params: { id: @user_id }
+        delete :signout, params: { id: @user_id }, format: :json
       end
 
       it 'is successful' do
@@ -94,7 +96,7 @@ RSpec.describe UsersController do
 
     describe 'GET index' do
       before(:each) do
-        get :index
+        get :index, format: :json
       end
 
       it 'is successful' do
@@ -109,7 +111,7 @@ RSpec.describe UsersController do
 
     describe 'GET show' do
       before(:each) do
-        get :index, params: { id: @user_id }
+        get :index, params: { id: @user_id }, format: :json
       end
 
       it 'is successful' do

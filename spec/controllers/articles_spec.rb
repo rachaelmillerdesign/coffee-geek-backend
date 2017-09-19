@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe ArticlesController do
@@ -48,8 +49,7 @@ RSpec.describe ArticlesController do
     end
 
     before(:each) do
-      patch :update, id: article.id,
-                     params: { article: article_diff }
+      patch :update, params: { id: article.id, article: article_diff }
     end
 
     skip 'is successful' do
