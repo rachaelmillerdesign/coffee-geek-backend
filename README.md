@@ -35,6 +35,7 @@ By the end of this lesson, students should be able to:
 
 1.  [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
+1.  Create and checkout to a new branch, `training`g, for your work.
 1.  Install dependencies with `bundle install`.
 1.  Run `bundle exec rake db:create` and `bundle exec rake db:migrate`.
 
