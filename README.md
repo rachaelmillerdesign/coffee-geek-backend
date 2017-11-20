@@ -26,7 +26,6 @@ By the end of this lesson, students should be able to:
 -   Develop a Rails API using outside-in, behavior-driven testing.
 -   Describe the difference between Behavior and Test Driven Development
     (BDD vs TDD)
--   Make user stories to drive wireframes.
 -   Drive behavior specification with user stories.
 -   Write automated CRUD request specs with RSpec.
 -   Drive routing, model, and controller specs using request specs.
