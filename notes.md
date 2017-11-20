@@ -1,5 +1,14 @@
 # Delivery Notes
 
+You are not expected to complete the entire talk. Get through as much as you can. We do not require testing as a graduation requirement or technology to implement in their projects, however it is likely going to come up very early in their development career, hence our talk on the topic.
+
+Mention the order of the two pieces of data in an assertion: `expect(response_from_application).to eq(known_good_data_likely_set_up_in_spec)`
+
+## Foreign Key Reference for Comments
+
+To create foreign key reference: `rails generate migration AddArticleToComments article:references`
+
+
 ## Whiteboard Diagrams
 
 ![](https://git.generalassemb.ly/storage/user/4584/files/ba553c00-2bc2-11e7-8166-c370e4bd0527)
