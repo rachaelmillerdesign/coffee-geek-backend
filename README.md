@@ -50,7 +50,7 @@ How do good user stories and wireframes help with app development?
 
 ## Behavior Driven vs. Test Driven Development
 Tests can be written before or after writing development code. Writing tests
-after development is called 'backfilling'.  Test driven development (TDD) is a
+after development is called 'backfilling'. Test driven development (TDD) is a
 specific order of testing and writing code:
 
 1.  Write a test
