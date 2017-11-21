@@ -42,7 +42,6 @@ Temporary Items
 .nfs*
 
 # End of https://www.gitignore.io/api/macos,linux
-.env
 # Created by https://www.gitignore.io/api/ruby
 ### Ruby ###
 *.gem
@@ -127,3 +126,4 @@ bower.json # same
 # Ignore Byebug command history file.
 .byebug_history
 # End of https://www.gitignore.io/api/rails
+.env
