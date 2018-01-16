@@ -302,6 +302,7 @@ Comments resource.
 -   [Testing Stripe with Rails and RSpec - Hackernoon](https://hackernoon.com/testing-stripe-with-rails-and-rspec-de79e1206839)
 
 ### Practice
+-   [Rails API test challenge - General Assembly](https://git.generalassemb.ly/danman01/rails-api-test-challenge/tree/failing-dk)
 -   [TDD in Javascript](https://github.com/dwyl/learn-tdd)
 
 
