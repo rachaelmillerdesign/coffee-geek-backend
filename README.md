@@ -291,6 +291,8 @@ Comments resource.
 
 ### Best Practices
 -   [Better Spec](http://betterspecs.org/)
+-   [Mocking with RSpec - SemaphoreCI](https://semaphoreci.com/community/tutorials/mocking-with-rspec-doubles-and-expectations)
+-   [Test Doubles and Stubs - Thoughtbot](https://robots.thoughtbot.com/how-we-test-rails-applications#test-doubles-and-stubs)
 
 ### Walkthroughs
 -   [How I learned to test my Rails Applications, series](http://everydayrails.com/2012/03/12/testing-series-intro.html)
