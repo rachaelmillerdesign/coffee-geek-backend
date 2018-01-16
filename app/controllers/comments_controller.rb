@@ -4,21 +4,6 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: %i[show update destroy]
   before_action :set_article, only: %i[index create]
 
-  def index
-  end
-
-  def show
-  end
-
-  def create
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
   private
 
   def set_article
