@@ -285,10 +285,15 @@ Comments resource.
 
 ## Additional Resources
 
+### Documentation
 -   [RSpec Rails on Github](https://github.com/rspec/rspec-rails)
--   [How I learned to test my Rails Applications, series](http://everydayrails.com/2012/03/12/testing-series-intro.html)
--   [Better Spec](http://betterspecs.org/)
 -   [Rspec Docs from Relish](https://relishapp.com/rspec)
+
+### Best Practices
+-   [Better Spec](http://betterspecs.org/)
+
+### Walkthroughs
+-   [How I learned to test my Rails Applications, series](http://everydayrails.com/2012/03/12/testing-series-intro.html)
 -   [A great example of outside-in testing from Ruby Tapas](http://everydayrails.com/2014/01/15/outside-in-example-ruby-tapas.html)
 -   [#275 How I Test - RailsCasts](http://railscasts.com/episodes/275-how-i-test)
 -   [How We Test Rails Applications](http://robots.thoughtbot.com/how-we-test-rails-applications)
