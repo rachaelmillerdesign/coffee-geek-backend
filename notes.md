@@ -36,3 +36,14 @@ Using the word should here is due to this Behavior Driven Development style.
 ![](https://git.generalassemb.ly/storage/user/3667/files/744d1ce6-9ee0-11e7-9503-530566ae6e34)
 
 Our workflow for writing the tests. They should always fail after we write them because we write the code after the test.
+
+## Response status codes
+
+Why does the `response` object in tests almost always have status code 200?
+Stack Overflow knows.
+
+> So, looking at the the in-code documentation for ActionController::TestCase::Behavior, under the Special Instance Variables section, we can see that ActionController::TestCase will automatically provide a @response instance variable (readable as just response in the test), which is "an ActionDispatch::TestResponse object, representing the response of the last HTTP response". So, that would seem to explain why there is a response able to be accessed without needing an explicit request made in a controller spec, but why is it's status 200?
+
+>Well, ActionDispatch::TestResponse inherits from ActionDispatch::Response, which when initialized provides 200 as the default status. You can even test this out in your rails console:
+
+So from within an it block response is a method that will return the value of the instance variable @response. That instance variable will contain whichever the last response was, and it's default status code is 200 before any requests are made.
