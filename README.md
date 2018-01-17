@@ -75,7 +75,7 @@ running the feature, seeing a new error, etc...
 
 ## Outside-In Testing
 
-![Test Cycle](http://jakegoulding.com/images/blog/bdd-cycle.png)
+![Test Cycle](https://git.generalassemb.ly/storage/user/5694/files/84f7ceba-fb9c-11e7-9c40-6af23cca6a13)
 
 ### Feature Tests
 
