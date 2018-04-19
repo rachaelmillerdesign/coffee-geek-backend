@@ -67,7 +67,7 @@ RSpec.describe UsersController do
 
       before(:each) do
         patch :changepw,
-              params: { id: @user_id, passwords: new_password_params },
+              params: { passwords: new_password_params },
               format: :json
       end
 
@@ -82,7 +82,7 @@ RSpec.describe UsersController do
 
     describe 'DELETE signout' do
       before(:each) do
-        delete :signout, params: { id: @user_id }, format: :json
+        delete :signout, format: :json
       end
 
       it 'is successful' do
