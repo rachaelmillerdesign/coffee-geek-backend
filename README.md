@@ -143,12 +143,13 @@ Failures:
 ```
 
 This output tells us exactly what went wrong (or more accurately, what did not
-  go as expected), and should be treated as our guide towards working code.
+go as expected), and should be treated as our guide towards working code.
 
 ### Code-along: `GET /articles` Routing Spec
 
 Our test told us that no route matches "/articles". So the next step is to write
 a test for that route.
+
 What do we expect that route to do?
 
 Let's work on our `GET /articles` routing spec in
@@ -172,7 +173,7 @@ Failure/Error: get '/articles'
 ```
 
 To wrap up our checks that all articles are correctly returned from our `index`
- method, we'll need a passing test for the controller method itself: [spec/controllers/articles_spec.rb](spec/controllers/articles_spec.rb).
+method, we'll need a passing test for the controller method itself: [spec/controllers/articles_spec.rb](spec/controllers/articles_spec.rb).
 
 Once the test is written, let's write an `index` method on the Article Controller.
 Don't forget to commit when your tests pass!
@@ -246,52 +247,68 @@ write a test for that!
 Write a feature test for post requests.
 Then, following BDD, write tests for the route and controller.
 
-## Testing Our Model
+## Lab: Comments Resource and Testing Your Models
 
-### Code-along: `Article` Model Spec
+Now that you've got this far let's keep working, here are the steps you should
+follow in order to test that your Models are set up correctly.
+
+Follow this link to learn more about [Model testing with RSpec](https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-rspec).
+
+You not only want to test that the Model is set up correctly for its own data,
+but that it also knows about relationships it is meant to have with other resources.
+
+For instance, it would be nice if Users could leave Comments on Articles in your
+application. A Comment should be tied directly to an Article because otherwise it
+loses its context. For this to work, we'll need a new Comment resource.
+
+### Comment Resource
+
+Create and run through request, routing, and controller specs for your
+Comment resource. Follow the same steps that you used for Articles. Remember you
+can build out a resource independently at first, even if you know that you want
+it to have a relationship later on.
+
+Once Comments are set up you can move on to setting up the relationship between
+Comments and Articles, as well as adding the actual Model specs to both resources.
+
+### Article Model Spec
 
 **User Story** As a user, I want to see the comments associated with an article.
 **User Story** As a user, I want comments to be deleted when an article is deleted.
 
-In [spec/models/article_spec.rb](spec/models/article_spec.rb), we will need
+In [spec/models/article_spec.rb](spec/models/article_spec.rb), you will need
 to write tests to check for the following:
 
 1. Articles can have many comments.
 1. If an article is destroyed, its associated comments must also be destroyed.
 
-Our first step will be to create feature tests to account for these
+Your first step will be to create feature tests to account for these
 new requirements. Create a new file: `spec/requests/article_comments_spec.rb`.
 
-### Lab: Write `Article` Model and Run the Specs
+### Write Article Model and Run the Specs
 
-Based on our `Article` Model specs, run your specs to complete what is expected
- at [app/models/article.rb](app/models/article.rb).
+Based on your `Article` Model specs, run your specs to complete what is expected
+at [app/models/article.rb](app/models/article.rb).
 
- Run one spec at a time until they have all passed.
+Run one spec at a time until they have all passed.
 
-### Code-along: Test Article Model
+### Test Article Model
 
- In [spec/models/article_spec.rb](spec/models/article_spec.rb), let's test to
- see if we:
+In [spec/models/article_spec.rb](spec/models/article_spec.rb), test to see if you:
 
 1. are associating comments to articles
-1. have set our `inverse_of` record
+1. have set your `inverse_of` record
 1. are deleting comments associated to articles when articles are deleted
 
-### Code-along: Iterate over Article Model to Ensure Validations
+### Iterate over Article Model to Ensure Validations
 
-Using our BDD skills, let's create tests to check that our Article model is
+Using your BDD skills, create tests to check that your Article model is
 [validating the presence](http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_presence_of)
-of `content` and `title`. We don't want articles created that are missing
- either one of those fields.
+of `content` and `title`. You don't want articles created that are missing
+either one of those fields.
 
-We will create our tests first and let those drive us towards an
+You will create your tests first and let those drive you towards an
 adequately-validated model.
-
-### Lab: Test Comments Resource
-
-Create and run through request, routing, controller and model specs for our
-Comments resource.
 
 ## Additional Resources
 
