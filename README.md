@@ -75,7 +75,7 @@ running the feature, seeing a new error, etc...
 
 ## Outside-In Testing
 
-![Test Cycle](https://git.generalassemb.ly/storage/user/5694/files/84f7ceba-fb9c-11e7-9c40-6af23cca6a13)
+![Test Cycle](https://git.generalassemb.ly/storage/user/3667/files/13c78026-43bf-11e8-991b-039f4af8088c)
 
 ### Feature Tests
 
