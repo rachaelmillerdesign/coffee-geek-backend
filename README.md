@@ -295,30 +295,28 @@ Comments resource.
 
 ## Additional Resources
 
-### Documentation
+**Documentation**
 
 - [RSpec Rails on Github](https://github.com/rspec/rspec-rails)
-- [Rspec Docs from Relish](https://relishapp.com/rspec)
 
-### Best Practices
+**Best Practices**
 
 - [Better Spec](http://betterspecs.org/)
-- [Mocking with RSpec - SemaphoreCI](https://semaphoreci.com/community/tutorials/mocking-with-rspec-doubles-and-expectations)
-- [Test Doubles and Stubs - Thoughtbot](https://robots.thoughtbot.com/how-we-test-rails-applications#test-doubles-and-stubs)
 
-### Walkthroughs
+**Walkthroughs**
 
 - [How I learned to test my Rails Applications, series](http://everydayrails.com/2012/03/12/testing-series-intro.html)
-- [A great example of outside-in testing from Ruby Tapas](http://everydayrails.com/2014/01/15/outside-in-example-ruby-tapas.html)
-- [#275 How I Test - RailsCasts](http://railscasts.com/episodes/275-how-i-test)
 - [How We Test Rails Applications](http://robots.thoughtbot.com/how-we-test-rails-applications)
 - [Testing Stripe with Rails and RSpec - Hackernoon](https://hackernoon.com/testing-stripe-with-rails-and-rspec-de79e1206839)
-- [How to Test External APIs - Carbon Five](https://blog.carbonfive.com/2012/03/18/how-to-test-external-apis/)
 
-### Practice
+**Practice**
 
 - [Rails API test challenge - General Assembly](https://git.generalassemb.ly/danman01/rails-api-test-challenge/tree/failing-dk)
 - [TDD in Javascript](https://github.com/dwyl/learn-tdd)
+
+**Video**
+
+- [TDD, where did it all go wrong?](https://vimeo.com/68375232)
 
 ## [License](LICENSE)
 
