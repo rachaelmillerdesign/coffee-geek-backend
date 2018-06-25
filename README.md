@@ -247,7 +247,7 @@ write a test for that!
 Write a feature test for post requests.
 Then, following BDD, write tests for the route and controller.
 
-## Lab: Comments Resource and Testing Your Models
+## Comments Resource and Testing Your Models
 
 Now that you've got this far let's keep working, here are the steps you should
 follow in order to test that your Models are set up correctly.
@@ -260,6 +260,10 @@ but that it also knows about relationships it is meant to have with other resour
 For instance, it would be nice if Users could leave Comments on Articles in your
 application. A Comment should be tied directly to an Article because otherwise it
 loses its context. For this to work, we'll need a new Comment resource.
+
+For something a bit easier, you can skip the Comments resource for now and just
+add a spec for the Article Model from the section below labeled `Iterate over
+Article Model to Ensure Validations`.
 
 ### Comment Resource
 
