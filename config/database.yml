@@ -1,4 +1,4 @@
-<% project_name = 'rails-api-bdd' %>
+<% project_name = 'coffee-geek-miller' %>
 
 default: &default
   adapter: postgresql
