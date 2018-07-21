@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   resources :coffees
+  resources :tastings
   resources :users
   resources :examples, except: %i[new edit]
   post '/sign-up' => 'users#signup'

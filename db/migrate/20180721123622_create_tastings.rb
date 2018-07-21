@@ -1,8 +1,8 @@
-class CreateCoffees < ActiveRecord::Migration[5.1]
+class CreateTastings < ActiveRecord::Migration[5.1]
   def change
-    create_table :coffees do |t|
-      t.references :user, index: true, foreign_key: true, null: false
-      t.date :date
+    create_table :tastings do |t|
+      t.string :user
+      t.string :date
       t.string :roaster
       t.string :blend
       t.integer :days_post_roast
@@ -15,7 +15,8 @@ class CreateCoffees < ActiveRecord::Migration[5.1]
       t.time :time
       t.integer :temperature
       t.integer :brew_ratio
-      t.integer :extraction_notes
+      t.string :extraction_notes
+
       t.timestamps
     end
   end
