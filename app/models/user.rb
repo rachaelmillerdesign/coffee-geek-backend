@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-  has_many :coffees
+  include Authentication
+  has_many :tastings
 end
