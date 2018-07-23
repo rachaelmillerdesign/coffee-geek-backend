@@ -10,25 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180722192647) do
+ActiveRecord::Schema.define(version: 20180721123622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-  end
-
   create_table "coffees", force: :cascade do |t|
     t.string "name"
     t.string "roaster"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,7 +31,8 @@ ActiveRecord::Schema.define(version: 20180722192647) do
   end
 
   create_table "tastings", force: :cascade do |t|
-    t.string "user"
+    t.bigint "user_id", null: false
+    t.bigint "coffee_id", null: false
     t.string "date"
     t.string "roaster"
     t.string "blend"
@@ -55,11 +45,10 @@ ActiveRecord::Schema.define(version: 20180722192647) do
     t.integer "grams_out"
     t.time "time"
     t.integer "temperature"
-    t.integer "brew_ratio"
     t.string "extraction_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
+    t.index ["coffee_id"], name: "index_tastings_on_coffee_id"
     t.index ["user_id"], name: "index_tastings_on_user_id"
   end
 
@@ -74,5 +63,6 @@ ActiveRecord::Schema.define(version: 20180722192647) do
   end
 
   add_foreign_key "examples", "users"
+  add_foreign_key "tastings", "coffees"
   add_foreign_key "tastings", "users"
 end
