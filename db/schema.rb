@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160811195653) do
+ActiveRecord::Schema.define(version: 20180722192647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 20160811195653) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "content"
+  end
+
+  create_table "coffees", force: :cascade do |t|
+    t.string "name"
+    t.string "roaster"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
@@ -34,6 +41,28 @@ ActiveRecord::Schema.define(version: 20160811195653) do
     t.index ["user_id"], name: "index_examples_on_user_id"
   end
 
+  create_table "tastings", force: :cascade do |t|
+    t.string "user"
+    t.string "date"
+    t.string "roaster"
+    t.string "blend"
+    t.integer "days_post_roast"
+    t.boolean "espresso"
+    t.integer "rating"
+    t.boolean "favorite"
+    t.string "tasting_notes"
+    t.integer "grams_in"
+    t.integer "grams_out"
+    t.time "time"
+    t.integer "temperature"
+    t.integer "brew_ratio"
+    t.string "extraction_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_tastings_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "token", null: false
@@ -45,4 +74,5 @@ ActiveRecord::Schema.define(version: 20160811195653) do
   end
 
   add_foreign_key "examples", "users"
+  add_foreign_key "tastings", "users"
 end
