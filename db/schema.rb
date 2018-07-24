@@ -16,8 +16,12 @@ ActiveRecord::Schema.define(version: 20180721123622) do
   enable_extension "plpgsql"
 
   create_table "coffees", force: :cascade do |t|
-    t.string "name"
-    t.string "roaster"
+    t.string "blend", null: false
+    t.string "roaster", null: false
+    t.boolean "favorite"
+    t.integer "rating"
+    t.integer "days_post_roast"
+    t.boolean "espresso"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,12 +38,6 @@ ActiveRecord::Schema.define(version: 20180721123622) do
     t.bigint "user_id", null: false
     t.bigint "coffee_id", null: false
     t.string "date"
-    t.string "roaster"
-    t.string "blend"
-    t.integer "days_post_roast"
-    t.boolean "espresso"
-    t.integer "rating"
-    t.boolean "favorite"
     t.string "tasting_notes"
     t.integer "grams_in"
     t.integer "grams_out"
