@@ -47,6 +47,17 @@ class TastingsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def tasting_params
       binding.pry
-      params.require(:tasting).permit(:user, :date, :roaster, :blend, :days_post_roast, :espresso, :rating, :favorite, :tasting_notes, :grams_in, :grams_out, :time, :temperature, :brew_ratio, :extraction_notes)
+      params.require(:tasting).permit(:user, :coffee, :date, :tasting_notes, :grams_in, :grams_out, :time, :temperature, :extraction_notes)
     end
 end
+
+# create_table :tastings do |t|
+#   t.references :user, index: true, foreign_key: true, null: false
+#   t.references :coffee, index: true, foreign_key: true, null: false
+#   t.string :date
+#   t.string :tasting_notes
+#   t.integer :grams_in
+#   t.integer :grams_out
+#   t.time :time
+#   t.integer :temperature
+#   t.string :extraction_notes
