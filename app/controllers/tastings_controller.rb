@@ -1,5 +1,5 @@
-class TastingsController < ApplicationController
-  before_action :set_tasting, only: [:show, :update, :destroy]
+class TastingsController < ProtectedController
+  before_action :set_example, only: %i[update destroy]
 
   # GET /tastings
   def index
@@ -10,15 +10,15 @@ class TastingsController < ApplicationController
 
   # GET /tastings/1
   def show
-    render json: @tasting
+    render json: Tasting.find(params[:id])
   end
 
   # POST /tastings
   def create
-    @tasting = Tasting.new(tasting_params)
+    @tasting = current_user.tastings.build(tasting_params)
 
     if @tasting.save
-      render json: @tasting, status: :created, location: @tasting
+      render json: @tasting, status: :created
     else
       render json: @tasting.errors, status: :unprocessable_entity
     end
@@ -36,6 +36,8 @@ class TastingsController < ApplicationController
   # DELETE /tastings/1
   def destroy
     @tasting.destroy
+
+    head :no_content
   end
 
   private
@@ -46,18 +48,6 @@ class TastingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tasting_params
-      binding.pry
       params.require(:tasting).permit(:user, :coffee, :date, :tasting_notes, :grams_in, :grams_out, :time, :temperature, :extraction_notes)
     end
 end
-
-# create_table :tastings do |t|
-#   t.references :user, index: true, foreign_key: true, null: false
-#   t.references :coffee, index: true, foreign_key: true, null: false
-#   t.string :date
-#   t.string :tasting_notes
-#   t.integer :grams_in
-#   t.integer :grams_out
-#   t.time :time
-#   t.integer :temperature
-#   t.string :extraction_notes
