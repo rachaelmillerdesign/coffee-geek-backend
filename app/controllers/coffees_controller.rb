@@ -49,6 +49,6 @@ class CoffeesController < ProtectedController
 
     # Only allow a trusted parameter "white list" through.
     def coffee_params
-      params.require(:coffee).permit(:roaster, :blend, :favorite, :rating, :days_post_roast, :espresso)
+      params.require(:coffee, :roaster, :blend).permit(:favorite, :rating, :days_post_roast, :espresso)
     end
 end
