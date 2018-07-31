@@ -4,7 +4,7 @@ class TastingsController < ProtectedController
   # GET /tastings
   def index
     @tastings = Tasting.all
-
+    # binding.pry
     render json: @tastings
   end
 
@@ -48,6 +48,6 @@ class TastingsController < ProtectedController
 
     # Only allow a trusted parameter "white list" through.
     def tasting_params
-      params.require(:tasting).permit(:user, :coffee, :date, :tasting_notes, :grams_in, :grams_out, :time, :temperature, :extraction_notes)
+      params.require(:tasting).permit(:user, :roaster, :coffee, :date, :tasting_notes, :grams_in, :grams_out, :time, :temperature, :extraction_notes)
     end
 end
