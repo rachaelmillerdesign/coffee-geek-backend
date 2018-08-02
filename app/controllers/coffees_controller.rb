@@ -1,16 +1,16 @@
 class CoffeesController < ProtectedController
-  before_action :set_example, only: %i[update destroy]
+  before_action :set_coffee, only: %i[show update destroy]
 
   # GET /coffees
   def index
-    @coffees = Coffee.all
+    @coffees = current_user.coffees.all
 
     render json: @coffees
   end
 
   # GET /coffees/1
   def show
-    render json: Coffee.find(params[:id])
+    render json: @coffee
   end
 
   # POST /coffees
