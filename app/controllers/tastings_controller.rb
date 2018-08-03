@@ -48,6 +48,6 @@ class TastingsController < ProtectedController
 
     # Only allow a trusted parameter "white list" through.
     def tasting_params
-      params.require(:tasting).permit(:user, :roaster, :coffee, :date, :tasting_notes, :grams_in, :grams_out, :time, :temperature, :extraction_notes)
+      params.require(:tasting).permit(:coffee_id, :date, :tasting_notes, :grams_in, :grams_out, :time, :temperature, :extraction_notes)
     end
 end
