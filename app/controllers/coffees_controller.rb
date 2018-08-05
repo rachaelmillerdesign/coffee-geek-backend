@@ -1,9 +1,9 @@
-class CoffeesController < ProtectedController
+class CoffeesController < OpenReadController
   before_action :set_coffee, only: %i[show update destroy]
 
   # GET /coffees
   def index
-    @coffees = current_user.coffees.all
+    @coffees = Coffee.all
 
     render json: @coffees
   end
@@ -44,8 +44,11 @@ class CoffeesController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_coffee
-      @coffee = current_user.coffees.find(params[:id])
+      @coffee = Coffee.find(params[:id])
     end
+    # def set_coffee
+    #   @coffee = current_user.coffees.find(params[:id])
+    # end
 
     # Only allow a trusted parameter "white list" through.
     def coffee_params
