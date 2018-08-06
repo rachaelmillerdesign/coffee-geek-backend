@@ -1,16 +1,16 @@
 class TastingsController < ProtectedController
-  before_action :set_example, only: %i[update destroy]
+  before_action :set_tasting, only: %i[show update destroy]
 
   # GET /tastings
   def index
-    @tastings = Tasting.all
-
+    @tastings = current_user.tastings.all
+    # binding.pry
     render json: @tastings
   end
 
   # GET /tastings/1
   def show
-    render json: Tasting.find(params[:id])
+    render json: @tasting
   end
 
   # POST /tastings
@@ -43,11 +43,11 @@ class TastingsController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tasting
-      @tasting = Tasting.find(params[:id])
+      @tasting = current_user.tastings.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def tasting_params
-      params.require(:tasting).permit(:user, :coffee, :date, :tasting_notes, :grams_in, :grams_out, :time, :temperature, :extraction_notes)
+      params.require(:tasting).permit(:coffee_id, :date, :tasting_notes, :grams_in, :grams_out, :time, :temperature, :extraction_notes)
     end
 end
