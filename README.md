@@ -6,7 +6,7 @@ This is the first full stack app I am producing! It has been an exciting process
 
 **Coffee Geek** allows users (currently only available for one user, more coming soon!) to choose a coffee from the database and then document tastings they have done with it. This includes tasting notes, extraction notes, grams in/out, rating, etc.
 
-This GitHub page is the front end of the application.  The back end can be found here: https://github.com/rachaelmillerdesign/coffee-geek-backend.
+This GitHub page is the back end of the application.  The front end can be found here: https://github.com/rachaelmillerdesign/coffee-geek-miller.
 
 The deployed sites can be found here:
 
