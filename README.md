@@ -6,7 +6,7 @@ This is the first full stack app I am producing! It has been an exciting process
 
 **Coffee Geek** allows users (currently only available for one user, more coming soon!) to choose a coffee from the database and then document tastings they have done with it. This includes tasting notes, extraction notes, grams in/out, rating, etc.
 
-This GitHub page is the front end of the application.  The front end can be found here: https://github.com/rachaelmillerdesign/coffee-geek-miller.
+This GitHub page is the front end of the application.  The back end can be found here: https://github.com/rachaelmillerdesign/coffee-geek-backend.
 
 The deployed sites can be found here:
 
@@ -25,15 +25,16 @@ This project has required me to build my first back end app, with a front end to
 - Created user stories and wireframes as part of planning the app prior to coding.
 
 Here is a diagram of the ERD:
-
-![ERD](/images_for_readme/Screen Shot 2018-07-26 at 5.39.42 AM.png)
+https://user-images.githubusercontent.com/39502188/45237342-61385180-b2ac-11e8-8f52-0a3dc9cc8be9.png
 
 Technologies used include:
 
 **HTML5, CSS3, Javascript, JQuery, Ruby, Rails, JSON, SQL, Curl, API,**
 
-
-
+https://user-images.githubusercontent.com/39502188/45237342-61385180-b2ac-11e8-8f52-0a3dc9cc8be9.png
+https://user-images.githubusercontent.com/39502188/45237341-61385180-b2ac-11e8-852d-17b83548318b.jpg
+https://user-images.githubusercontent.com/39502188/45237340-61385180-b2ac-11e8-8c9d-46092b627f50.jpg
+https://user-images.githubusercontent.com/39502188/45237339-61385180-b2ac-11e8-93fe-bf1edc45b499.jpg
 <u>Possibilities for future refinement and development include:</u>
 
 - ratings score card / visualizer
